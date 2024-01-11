@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { catalogData } from "./catalog-data";
 
 import Header from '../components/header/header';
@@ -15,7 +15,7 @@ function Catalog() {
         return (
             <div className="catalog-item">
                 <img src={image} alt={title} />
-                <h3 className="aaa">{title}</h3>
+                <h3 className="catalog-title">{title}</h3>
                 <p>{description}</p>
                 <button onClick={() => setModalActive(true)}>Заказать!</button>
             </div>
