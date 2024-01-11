@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Header from '../components/header/header';
-import Footer from "../components/footer/footer";
 
 import './style.css';
 
@@ -41,7 +40,6 @@ function Contact(){
                 </div>
 
             </div>
-           <Footer/>
         </>
     );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Header from '../components/header/header';
-import Footer from '../components/footer/footer';
+
 import Modal from './modal';
 
 import './style.css';
@@ -20,7 +20,6 @@ function Order() {
                 <input className="input-search" />
                 <button className="button-search" onClick={() => setModalActive(true)}>Найти</button>
             </div>
-            <Footer />
         </div>
     );
 }

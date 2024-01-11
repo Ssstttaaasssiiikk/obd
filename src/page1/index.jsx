@@ -1,7 +1,6 @@
 import React from "react";
 
 import Header from '../components/header/header';
-import Footer from "../components/footer/footer";
 
 
 function Page(){
@@ -14,7 +13,6 @@ function Page(){
                         свой неповторимый след. Наши профессионалы объединяют техническое мастерство с творческим подходом, обеспечивая высококачественную и стильную печать. 
                     </span>
                 </div>
-                <Footer/>
         </div>
     );
 }

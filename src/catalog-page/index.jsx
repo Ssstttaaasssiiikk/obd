@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { catalogData } from "./catalog-data";
 
 import Header from '../components/header/header';
-import Footer from "../components/footer/footer";
 
 import Modal from './modal';
 
@@ -37,7 +36,6 @@ function Catalog() {
                     />
                 ))}
             </div>
-            <Footer />
         </div>
     );
 }
