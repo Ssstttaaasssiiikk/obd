@@ -1,16 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 
 import MainPage from './main_page/index';
-import Catalog from './catalog-page/index';
-import Contact from './contact-page/index';
-import Order from './order-page';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Order />
-  </React.StrictMode>
+    <BrowserRouter>
+      <MainPage/>
+    </BrowserRouter>
 );
+
+
 
