@@ -1,5 +1,4 @@
 .catalog-page {
-    padding-top: 100px;
     padding-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
