@@ -1,20 +1,12 @@
 .catalog-page {
+    padding-top: 100px;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     align-items: baseline;
     gap: 10px;
 }
-
-/* .catalog-page {
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-} */
 
 .catalog-item {
     display: inline-flex;

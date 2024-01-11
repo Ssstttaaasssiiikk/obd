@@ -4,11 +4,12 @@ footer{
     display: flex;
     justify-content: center;
     left: 0;
-    bottom: 0;
+    position: absolute;
+    bottom: auto;
     width: 100%;
 }
 
-.text-footer{
+footer span{
     margin-top: 55px;
     color: white;
     font-size: 36px;
