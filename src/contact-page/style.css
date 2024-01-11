@@ -1,0 +1,36 @@
+.body{
+    display: block;
+}
+
+span{
+    color: black;
+}
+
+.sm{
+    width: 200px;
+    height: 200px;
+}
+
+.icon{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-sm{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.div-text{
+    display: flex;
+    justify-content: space-around;
+}
+
+.text{
+    margin-top: 20px;
+    font-size: 16px;
+}

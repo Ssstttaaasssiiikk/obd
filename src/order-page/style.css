@@ -1,0 +1,25 @@
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.text-title{
+    font-size: 48px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.input-search{
+    width: 360px;
+    height: 40px;
+}
+
+.button-search{
+    width: 100px;
+    height: 45px;
+}
