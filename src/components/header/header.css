@@ -1,7 +1,6 @@
-body{
+.body{
     margin: 0;
     height: 70px;
-    position: fixed;
     z-index: 9999;
     width: 100%;
 }
