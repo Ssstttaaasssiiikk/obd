@@ -6,7 +6,6 @@ import './style.css';
 
 
 
-// import MainPage from "./main_page";
 import Page from "../page1";
 import Contact from '../contact-page/index';
 import Order from "../order-page/index";
