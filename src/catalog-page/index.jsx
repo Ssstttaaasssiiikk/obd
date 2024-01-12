@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { catalogData } from "./catalog-data";
 
 import Header from '../components/header/header';
@@ -11,8 +11,22 @@ function Catalog() {
     const [modalActive, setModalActive] = useState(false);
 
     const CatalogItem = ({ image, title, description, setModalActive }) => {
+        const [name, setName] = useState();
+    useEffect(() => {
+        const storedValue = localStorage.getItem('savedValue');
+        const value = storedValue ? storedValue : 'Авторизоваться';
+        setName(value);
+    }, []);
         return (
             <div className="catalog-item">
+                <div>
+                {name === "admin" ? 
+                <div>
+                    <button onClick={() => setModalActive(true)}>Оформить заказ</button> 
+                    
+                </div>
+                : null}
+            </div>
                 <img src={image} alt={title} />
                 <h3 className="catalog-title">{title}</h3>
                 <p>{description}</p>

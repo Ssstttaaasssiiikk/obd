@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import './modal.css'
+import './add.css'
 
-function Modal({ active, setActive }) {
+function ModalAdd({ active, setActive }) {
     const [inputValue, setInputValue] = useState('');
     const [quantityValue, setQuantityValue] = useState('');
     const [noteValue, setNoteValue] = useState('');
@@ -32,7 +32,7 @@ function Modal({ active, setActive }) {
     return (
         <div className={active ? 'modal active' : 'modal'}>
             <div className="modal__content">
-                <span className="dialog-title">Оформление заказа</span>
+                <span className="dialog-title">Оформление временного заказа</span>
                 <div className="form">
                     <span className="text-input">
                         Имя заказа
@@ -47,7 +47,7 @@ function Modal({ active, setActive }) {
                         <textarea name="noteValue" value={noteValue} onChange={handleInputChange}></textarea>
                     </span>
                     <span className="buttons">
-                        <button className="order" onClick={addDataToLocalStorage}>Заказать</button>
+                        <button className="order" onClick={addDataToLocalStorage}>Сохранить</button>
                         <button className="close" onClick={() => setActive(false)}>Закрыть</button>
                     </span>
                 </div>
@@ -56,4 +56,4 @@ function Modal({ active, setActive }) {
     );
 }
 
-export default Modal;
+export default ModalAdd;

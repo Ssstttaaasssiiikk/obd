@@ -1,0 +1,49 @@
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+}
+
+.modal.active{
+    transform: scale(1);
+}
+
+.modal__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    height: 200px;
+    width: 400px;
+}
+
+.status{
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.dialog-title{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.closeB{
+    margin-top: 30px;
+}
+
+.closeB2{
+    margin-top: -15px;
+}
