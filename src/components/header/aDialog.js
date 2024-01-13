@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import './loginDialog.css';
 
-function Login({ active, setActive }) {
+function A({ active, setActive }) {
   const [inputValue, setInputValue] = useState("");
   
   const handleChange = (event) => {
@@ -19,15 +19,20 @@ function Login({ active, setActive }) {
 
   return (
     <div className={active ? "modal active" : "modal"}>
-      <div className="modal__content">
-        
-            <span className="dialog-text">Логин</span>
-            <input value={inputValue} onChange={handleChange} />
-            <span className="dialog-text">Пароль</span>
-            <input type="password" />
-            <button className="login-button" onClick={handleSubmit}>
-              Авторизоваться
-            </button>
+      <div className="modal__content1">
+            <span>Регистрация</span>
+            <input/>
+            <span>Логин</span>
+            <input/>
+            <span>Пароль</span>
+            <input/>
+            <span>Имя</span>
+            <input/>
+            <span>Фамилия</span>
+            <input/>
+            <span>Почта</span>
+            <input/>
+        <button onClick={handleSubmit}>Зарегистрирроваться</button>
         <button className="login-button" onClick={() => setActive(false)}>
           Закрыть
         </button>
@@ -36,4 +41,4 @@ function Login({ active, setActive }) {
   );
 }
 
-export default Login;
+export default A;
