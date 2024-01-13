@@ -12,6 +12,7 @@ function Catalog() {
 
     const CatalogItem = ({ image, title, description, setModalActive }) => {
         const [name, setName] = useState();
+        
     useEffect(() => {
         const storedValue = localStorage.getItem('savedValue');
         const value = storedValue ? storedValue : 'Авторизоваться';
@@ -23,7 +24,7 @@ function Catalog() {
                 {name === "admin" ? 
                 <div>
                     <button onClick={() => setModalActive(true)}>Оформить заказ</button> 
-                    
+                    <button onClick={() => setModalActive(true)}>Удалить</button>
                 </div>
                 : null}
             </div>
