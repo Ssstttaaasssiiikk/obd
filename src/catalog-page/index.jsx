@@ -9,25 +9,16 @@ import "./index.css"
 
 function Catalog() {
     const [modalActive, setModalActive] = useState(false);
-
-    const CatalogItem = ({ image, title, description, setModalActive }) => {
-        const [name, setName] = useState();
-        
+    const [name, setName] = useState();
     useEffect(() => {
         const storedValue = localStorage.getItem('savedValue');
         const value = storedValue ? storedValue : 'Авторизоваться';
         setName(value);
     }, []);
+
+    const CatalogItem = ({ image, title, description, setModalActive }) => {
         return (
             <div className="catalog-item">
-                <div>
-                {name === "admin" ? 
-                <div>
-                    <button onClick={() => setModalActive(true)}>Оформить заказ</button> 
-                    <button onClick={() => setModalActive(true)}>Удалить</button>
-                </div>
-                : null}
-            </div>
                 <img src={image} alt={title} />
                 <h3 className="catalog-title">{title}</h3>
                 <p>{description}</p>
@@ -40,6 +31,14 @@ function Catalog() {
         <div>
             <Header />
             <Modal active={modalActive} setActive={setModalActive} />
+            <div>
+                {name === "admin" ?
+                    <div>
+                        <button onClick={() => setModalActive(true)}>Оформить заказ</button>
+
+                    </div>
+                    : null}
+            </div>
             <div className="catalog-page">
                 {catalogData.map(item => (
                     <CatalogItem
