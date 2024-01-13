@@ -9,16 +9,28 @@ import "./index.css"
 
 function Catalog() {
     const [modalActive, setModalActive] = useState(false);
-    const [name, setName] = useState();
+    const [name, setName] = useState("");
+    const [catalog, setCatalog] = useState(catalogData);
     useEffect(() => {
         const storedValue = localStorage.getItem('savedValue');
         const value = storedValue ? storedValue : 'Авторизоваться';
         setName(value);
     }, []);
 
-    const CatalogItem = ({ image, title, description, setModalActive }) => {
+    const handleDeleteClick = (id) => {
+        const updatedCatalog = catalog.filter(item => item.id !== id);
+        setCatalog(updatedCatalog);
+        localStorage.setItem('catalogData', JSON.stringify(updatedCatalog));
+    };
+
+    const CatalogItem = ({ id, image, title, description }) => {
         return (
             <div className="catalog-item">
+                {name === "admin" && (
+                    <div>
+                        <button onClick={() => handleDeleteClick(id)}>Удалить</button>
+                    </div>
+                )}
                 <img src={image} alt={title} />
                 <h3 className="catalog-title">{title}</h3>
                 <p>{description}</p>
@@ -32,21 +44,20 @@ function Catalog() {
             <Header />
             <Modal active={modalActive} setActive={setModalActive} />
             <div>
-                {name === "admin" ?
+                {name === "admin" && (
                     <div>
                         <button onClick={() => setModalActive(true)}>Оформить заказ</button>
-
                     </div>
-                    : null}
+                )}
             </div>
             <div className="catalog-page">
-                {catalogData.map(item => (
+                {catalog.map(item => (
                     <CatalogItem
                         key={item.id}
+                        id={item.id}
                         image={item.image}
                         title={item.title}
                         description={item.description}
-                        setModalActive={setModalActive}
                     />
                 ))}
             </div>
